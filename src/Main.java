@@ -73,6 +73,28 @@ public class Main {
         if (isTeenager) {
             System.out.println("Если возраст ребенка равен " + randomAge + ", то ему можно кататься на аттракционе без сопровождения взрослого." + "\n");
         }
+
+        byte minPassenger = 10;
+        byte maxPassenger = 65;
+        byte totalCapacity = 102;
+        byte sitingsCapacity = 60;
+
+        byte randomSitingPassengers = getRandomNumber(minPassenger, maxPassenger);
+        byte randomStandingPassengers = getRandomNumber(minPassenger, maxPassenger);
+        short currentPassengersCount = (short) (randomSitingPassengers + randomStandingPassengers);
+
+        boolean hasPlaces = currentPassengersCount <= totalCapacity;
+        boolean hasSittings = randomSitingPassengers <= sitingsCapacity;
+
+        if (hasPlaces) {
+            if (hasSittings) {
+                System.out.println("В вагоне есть место, сидячее." + "\n");
+            } else {
+                System.out.println("В вагоне есть место, стоячее." + "\n");
+            }
+        } else {
+            System.out.println("Вагон уже полностью забит." + "\n");
+        }
     }
 
     public static byte getRandomNumber(byte min, byte max) {
