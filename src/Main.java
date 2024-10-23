@@ -95,6 +95,30 @@ public class Main {
         } else {
             System.out.println("Вагон уже полностью забит." + "\n");
         }
+
+
+        byte minNumber = -128;
+        byte maxNumber = 127;
+        int one = getRandomNumber(minNumber, maxNumber);
+        int two = getRandomNumber(minNumber, maxNumber);
+        int three = getRandomNumber(minNumber, maxNumber);
+
+        if (one > two && one > three) {
+            System.out.println("Самое большое число one: " + one);
+        } else {
+            if (two > three) {
+                System.out.println("Самое большое число two: " + two);
+            } else {
+                System.out.println("Самое большое число three: " + three);
+            }
+        }
+
+        System.out.println("\n" +
+                "Все числа: " + "\n" +
+                "one " + one + "\n" +
+                "two " + two + "\n" +
+                "three " + three
+        );
     }
 
     public static byte getRandomNumber(byte min, byte max) {
