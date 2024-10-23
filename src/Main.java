@@ -9,6 +9,16 @@ public class Main {
         } else {
             System.out.println("Если возраст человека равен " + randomAge + ", то он не достиг совершеннолетия, нужно немного подождать." + "\n");
         }
+
+        byte minTemperature = -15;
+        byte maxTemperature = 15;
+        byte randomTemperature = getRandomNumber(minTemperature, maxTemperature);
+
+        if (randomTemperature < 5) {
+            System.out.println("На улице " + randomTemperature + " градусов, нужно надеть шапку." + "\n");
+        } else {
+            System.out.println("На улице " + randomTemperature + " градусов, можно идти без шапки." + "\n");
+        }
     }
 
     public static byte getRandomNumber(byte min, byte max) {
