@@ -53,6 +53,26 @@ public class Main {
         if (isEmployee) {
             System.out.println("Если возраст человека равен " + randomAge + ", то ему нужно ходить" + " на работу" + "\n");
         }
+
+        byte logFalse = 0;
+        byte logTrue = 1;
+        byte randomLogNumber = getRandomNumber(logFalse, logTrue);
+        boolean hasAdult = randomLogNumber == logTrue;
+        boolean isBaby = randomAge < 5;
+        boolean isJuniorSchoolboy = randomAge >= 7 && randomAge <= 17;
+        boolean isTeenager = randomAge > 15;
+
+        if (isBaby) {
+            System.out.println("Если возраст ребенка равен " + randomAge + ", то ему нельзя кататься на аттракционе." + "\n");
+        }
+
+        if (isJuniorSchoolboy && hasAdult) {
+            System.out.println("Если возраст ребенка равен " + randomAge + ", то ему можно кататься на аттракционе в сопровождении взрослого." + "\n");
+        }
+
+        if (isTeenager) {
+            System.out.println("Если возраст ребенка равен " + randomAge + ", то ему можно кататься на аттракционе без сопровождения взрослого." + "\n");
+        }
     }
 
     public static byte getRandomNumber(byte min, byte max) {
