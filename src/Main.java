@@ -19,6 +19,16 @@ public class Main {
         } else {
             System.out.println("На улице " + randomTemperature + " градусов, можно идти без шапки." + "\n");
         }
+
+        byte minSpeed = 10;
+        byte maxSpeed = 120;
+        byte randomSpeed = getRandomNumber(minSpeed, maxSpeed);
+
+        if (randomSpeed > 60) {
+            System.out.println("Если скорость " + randomSpeed + ", то придется заплатить штраф." + "\n");
+        } else {
+            System.out.println("Если скорость " + randomSpeed + ", то можно ездить спокойно." + "\n");
+        }
     }
 
     public static byte getRandomNumber(byte min, byte max) {
